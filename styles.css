@@ -1,0 +1,29 @@
+#rock {
+    background-image: url(rock.png);
+    width: 95px;
+    height: 95px;
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: center;
+}
+
+#paper {
+    background-image: url(paper.png);
+    width: 95px;
+    height: 95px;
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: center;
+}
+
+#scissor {
+    background-image: url(scissor.png);
+    width: 95px;
+    height: 95px;
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: center;
+}
