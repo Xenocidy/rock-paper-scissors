@@ -1,11 +1,22 @@
+body {
+    background-color: #fcf2f0;
+}
+
+#button-div {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
 #rock {
     background-image: url(rock.png);
     width: 95px;
     height: 95px;
     background-size: 100px 100px;
     background-repeat: no-repeat;
-    background-color: white;
     background-position: center;
+    border-radius: 12px;
+    border: 3px solid black;
 }
 
 #paper {
@@ -14,8 +25,9 @@
     height: 95px;
     background-size: 100px 100px;
     background-repeat: no-repeat;
-    background-color: white;
     background-position: center;
+    border-radius: 12px;
+    border: 3px solid black;
 }
 
 #scissor {
@@ -24,6 +36,7 @@
     height: 95px;
     background-size: 100px 100px;
     background-repeat: no-repeat;
-    background-color: white;
     background-position: center;
+    border-radius: 12px;
+    border: 3px solid black;
 }
