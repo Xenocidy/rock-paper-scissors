@@ -19,6 +19,9 @@ let playerWins = 0;
 let cpuWins = 0;
 let ties = 0;
 
+const titleText = document.getElementById('title');
+const ruleText = document.getElementById('rule');
+
 /**
  * It takes in the player's and computer's selection and compares them to see who won the round.
  * It keeps track of the score respectively.
@@ -28,35 +31,44 @@ let ties = 0;
 function playRound(playerSelection, computerSelection) {
     if (computerSelection == 'Rock') {
         if (playerSelection == 'rock') {
-            alert("It's a tie! Both the player and computer selected rock!");
+            titleText.innerHTML = "It's a tie!";
+            ruleText.innerHTML = "Both the player and computer selected rock!";
             ties++;
         } else if (playerSelection == 'paper') {
-            alert("You won this round! The player selected paper and computer selected rock!");
+            titleText.innerHTML = "You won this round!";
+            ruleText.innerHTML = "The player selected paper and computer selected rock!";
             playerWins++;
         } else if (playerSelection == 'scissor') {
-            alert("You loss this round! The player selected scissor and computer selected rock!");
+            titleText.innerHTML = "You loss this round!";
+            ruleText.innerHTML = "The player selected scissor and computer selected rock!";
             cpuWins++;
         }
     } else if (computerSelection == 'Paper') {
         if (playerSelection == 'rock') {
-            alert("You loss this round! The player selected rock and computer selected paper!");
+            titleText.innerHTML = "You loss this round!";
+            ruleText.innerHTML = "The player selected rock and computer selected paper!";
             cpuWins++;
         } else if (playerSelection == 'paper') {
-            alert("It's a tie! Both the player and computer selected paper!");
+            titleText.innerHTML = "It's a tie!";
+            ruleText.innerHTML = "Both the player and computer selected paper!";
             ties++;
         } else if (playerSelection == 'scissor') {
-            alert("You won this round! The player selected scissor and computer selected paper!");
+            titleText.innerHTML = "You won this round!";
+            ruleText.innerHTML = "The player selected scissor and computer selected paper!";
             playerWins++;
         }
     } else if (computerSelection == 'Scissor') {
         if (playerSelection == 'rock') {
-            alert("You won this round! The player selected rock and computer selected scissor!");
+            titleText.innerHTML = "You won this round!";
+            ruleText.innerHTML = "The player selected rock and computer selected scissor!";
             playerWins++;
         } else if (playerSelection == 'paper') {
-            alert("You loss this round! The player selected paper and computer selected scissor!");
+            titleText.innerHTML = "You loss this round!";
+            ruleText.innerHTML = "The player selected paper and computer selected scissor!";
             cpuWins++;
         } else if (playerSelection == 'scissor') {
-            alert("It's a tie! Both the player and computer selected scissor!");
+            titleText.innerHTML = "It's a tie!";
+            ruleText.innerHTML = "Both the player and computer selected scissor!";
             ties++;
         }
     }
@@ -104,8 +116,6 @@ function playGame() {
         alert("Answer not recognized, refresh the page to try again.")
     }
 }
-
-//playGame();
 
 const rockButton = document.getElementById('rock');
 rockButton.addEventListener('click', () => {
