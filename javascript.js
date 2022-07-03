@@ -68,7 +68,7 @@ function playRound(playerSelection, computerSelection) {
  * computer, and asks the user if they want to keep playing.
  */
 function playGame() {
-    let game = prompt("Would you like to play a game of Rock Paper Scissors?");
+    //let game = prompt("Would you like to play a game of Rock Paper Scissors?");
     game = game.toLowerCase();
     if (game == 'yes') {
         playerWins = 0;
@@ -105,4 +105,19 @@ function playGame() {
     }
 }
 
-playGame();
+//playGame();
+
+const rockButton = document.getElementById('rock');
+rockButton.addEventListener('click', () => {
+  playRound('rock', computerPlay());
+});
+
+const paperButton = document.getElementById('paper');
+paperButton.addEventListener('click', () => {
+  playRound('paper', computerPlay());
+});
+
+const scissorButton = document.getElementById('scissor');
+scissorButton.addEventListener('click', () => {
+  playRound('scissor', computerPlay());
+});
