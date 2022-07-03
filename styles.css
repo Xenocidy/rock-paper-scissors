@@ -30,6 +30,30 @@ p {
     margin: 0%;
 }
 
+#game-icons {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+#player {
+    height: 95px;
+    width: 95px;
+    background-image: url(question.png);
+    background-size: 95px 95px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#cpu {
+    height: 95px;
+    width: 95px;
+    background-image: url(question.png);
+    background-size: 95px 95px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 #button-div {
     display: flex;
     justify-content: center;
