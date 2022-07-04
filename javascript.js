@@ -1,9 +1,35 @@
+const titleText = document.getElementById('title');
+const ruleText = document.getElementById('rule');
+const playerScore = document.getElementById('playerScore');
+const cpuScore = document.getElementById('cpuScore');
+const tieScore = document.getElementById('tieScore');
+
+const rockButton = document.getElementById('rock');
+const paperButton = document.getElementById('paper');
+const scissorButton = document.getElementById('scissor');
+
+let playerWins = 0;
+let cpuWins = 0;
+let ties = 0;
+
+rockButton.addEventListener('click', () => {
+  playRound('rock', computerPlay());
+});
+
+paperButton.addEventListener('click', () => {
+  playRound('paper', computerPlay());
+});
+
+scissorButton.addEventListener('click', () => {
+  playRound('scissor', computerPlay());
+});
+
 /**
  * It generates a random number between 0 and 2, and then returns the corresponding string value of the
  * number
  * @returns A random value between ‘Rock’, ‘Paper’ or ‘Scissor’.
  */
-function computerPlay() {
+ function computerPlay() {
     let random = Math.floor(Math.random() * 3);
 
     if (random == 0) {
@@ -14,13 +40,6 @@ function computerPlay() {
         return 'Scissor';
     }
 }
-
-let playerWins = 0;
-let cpuWins = 0;
-let ties = 0;
-
-const titleText = document.getElementById('title');
-const ruleText = document.getElementById('rule');
 
 /**
  * It takes in the player's and computer's selection and compares them to see who won the round.
@@ -72,6 +91,10 @@ function playRound(playerSelection, computerSelection) {
             ties++;
         }
     }
+
+    playerScore.innerHTML = playerWins;
+    cpuScore.innerHTML = cpuWins;
+    tieScore.innerHTML = ties;
 }
 
 /**
@@ -116,18 +139,3 @@ function playGame() {
         alert("Answer not recognized, refresh the page to try again.")
     }
 }
-
-const rockButton = document.getElementById('rock');
-rockButton.addEventListener('click', () => {
-  playRound('rock', computerPlay());
-});
-
-const paperButton = document.getElementById('paper');
-paperButton.addEventListener('click', () => {
-  playRound('paper', computerPlay());
-});
-
-const scissorButton = document.getElementById('scissor');
-scissorButton.addEventListener('click', () => {
-  playRound('scissor', computerPlay());
-});
