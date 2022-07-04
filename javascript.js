@@ -51,43 +51,43 @@ function playRound(playerSelection, computerSelection) {
     if (computerSelection == 'Rock') {
         if (playerSelection == 'rock') {
             titleText.innerHTML = "It's a tie!";
-            ruleText.innerHTML = "Both the player and computer selected rock!";
+            ruleText.innerHTML = "Rock ties with rock";
             ties++;
         } else if (playerSelection == 'paper') {
             titleText.innerHTML = "You won this round!";
-            ruleText.innerHTML = "The player selected paper and computer selected rock!";
+            ruleText.innerHTML = "Paper defeats rock";
             playerWins++;
         } else if (playerSelection == 'scissor') {
             titleText.innerHTML = "You loss this round!";
-            ruleText.innerHTML = "The player selected scissor and computer selected rock!";
+            ruleText.innerHTML = "Scissor is defeated by rock";
             cpuWins++;
         }
     } else if (computerSelection == 'Paper') {
         if (playerSelection == 'rock') {
             titleText.innerHTML = "You loss this round!";
-            ruleText.innerHTML = "The player selected rock and computer selected paper!";
+            ruleText.innerHTML = "Rock is defeated by paper";
             cpuWins++;
         } else if (playerSelection == 'paper') {
             titleText.innerHTML = "It's a tie!";
-            ruleText.innerHTML = "Both the player and computer selected paper!";
+            ruleText.innerHTML = "Paper ties with paper";
             ties++;
         } else if (playerSelection == 'scissor') {
             titleText.innerHTML = "You won this round!";
-            ruleText.innerHTML = "The player selected scissor and computer selected paper!";
+            ruleText.innerHTML = "Scissor defeats paper";
             playerWins++;
         }
     } else if (computerSelection == 'Scissor') {
         if (playerSelection == 'rock') {
             titleText.innerHTML = "You won this round!";
-            ruleText.innerHTML = "The player selected rock and computer selected scissor!";
+            ruleText.innerHTML = "Rock defeats scissor";
             playerWins++;
         } else if (playerSelection == 'paper') {
             titleText.innerHTML = "You loss this round!";
-            ruleText.innerHTML = "The player selected paper and computer selected scissor!";
+            ruleText.innerHTML = "Paper is defeated by scissor";
             cpuWins++;
         } else if (playerSelection == 'scissor') {
             titleText.innerHTML = "It's a tie!";
-            ruleText.innerHTML = "Both the player and computer selected scissor!";
+            ruleText.innerHTML = "Scissor ties with scissor";
             ties++;
         }
     }
