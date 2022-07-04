@@ -15,7 +15,7 @@ p {
     font-family: 'Indie Flower', cursive;
 }
 
-#header > p {
+#header>p {
     margin: 0%;
     font-size: 80px;
 }
@@ -62,7 +62,8 @@ p {
     gap: 150px;
 }
 
-#score p, #tieText {
+#score p,
+#tieText {
     padding: 0;
     margin: 0;
     font-size: 30px;
@@ -109,4 +110,18 @@ p {
     background-position: center;
     border-radius: 12px;
     border: 3px solid black;
+}
+
+#footer {
+    background-color: #cac2c0;
+    font-size: 30px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 6vw;
+}
+
+#footer a {
+    text-decoration: none;
+    outline: 0;
 }
