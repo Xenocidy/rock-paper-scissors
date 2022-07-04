@@ -15,17 +15,17 @@ let cpuWins = 0;
 let ties = 0;
 
 rockButton.addEventListener('click', () => {
-    playerIcon.style.backgroundImage = "url(rock.png)";
+    playerIcon.style.backgroundImage = "url(pics/rock.png)";
     playRound('rock', computerPlay());
 });
 
 paperButton.addEventListener('click', () => {
-    playerIcon.style.backgroundImage = "url(paper.png)";
+    playerIcon.style.backgroundImage = "url(pics/paper.png)";
     playRound('paper', computerPlay());
 });
 
 scissorButton.addEventListener('click', () => {
-    playerIcon.style.backgroundImage = "url(scissor.png)";
+    playerIcon.style.backgroundImage = "url(pics/scissor.png)";
     playRound('scissor', computerPlay());
 });
 
@@ -69,7 +69,7 @@ function playRound(playerSelection, computerSelection) {
             cpuWins++;
         }
 
-        cpuIcon.style.backgroundImage = "url(rock.png)";
+        cpuIcon.style.backgroundImage = "url(pics/rock.png)";
 
     } else if (computerSelection == 'Paper') {
         if (playerSelection == 'rock') {
@@ -86,7 +86,7 @@ function playRound(playerSelection, computerSelection) {
             playerWins++;
         }
 
-        cpuIcon.style.backgroundImage = "url(paper.png)";
+        cpuIcon.style.backgroundImage = "url(pics/paper.png)";
 
     } else if (computerSelection == 'Scissor') {
         if (playerSelection == 'rock') {
@@ -103,7 +103,7 @@ function playRound(playerSelection, computerSelection) {
             ties++;
         }
 
-        cpuIcon.style.backgroundImage = "url(scissor.png)";
+        cpuIcon.style.backgroundImage = "url(pics/scissor.png)";
 
     }
 

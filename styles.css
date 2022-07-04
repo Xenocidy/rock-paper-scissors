@@ -40,7 +40,7 @@ p {
 #player {
     height: 110px;
     width: 110px;
-    background-image: url(question.png);
+    background-image: url(pics/question.png);
     background-size: 110px 110px;
     background-repeat: no-repeat;
     background-position: center;
@@ -49,7 +49,7 @@ p {
 #cpu {
     height: 110px;
     width: 110px;
-    background-image: url(question.png);
+    background-image: url(pics/question.png);
     background-size: 110px 110px;
     background-repeat: no-repeat;
     background-position: center;
@@ -79,7 +79,7 @@ p {
 }
 
 #rock {
-    background-image: url(rock.png);
+    background-image: url(pics/rock.png);
     height: 110px;
     width: 110px;
     background-size: 110px 110px;
@@ -90,7 +90,7 @@ p {
 }
 
 #paper {
-    background-image: url(paper.png);
+    background-image: url(pics/paper.png);
     height: 110px;
     width: 110px;
     background-size: 110px 110px;
@@ -101,7 +101,7 @@ p {
 }
 
 #scissor {
-    background-image: url(scissor.png);
+    background-image: url(pics/scissor.png);
     height: 110px;
     width: 110px;
     background-size: 110px 110px;
