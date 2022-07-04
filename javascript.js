@@ -3,6 +3,8 @@ const ruleText = document.getElementById('rule');
 const playerScore = document.getElementById('playerScore');
 const cpuScore = document.getElementById('cpuScore');
 const tieScore = document.getElementById('tieScore');
+const playerIcon = document.getElementById('player');
+const cpuIcon = document.getElementById('cpu');
 
 const rockButton = document.getElementById('rock');
 const paperButton = document.getElementById('paper');
@@ -13,15 +15,18 @@ let cpuWins = 0;
 let ties = 0;
 
 rockButton.addEventListener('click', () => {
-  playRound('rock', computerPlay());
+    playerIcon.style.backgroundImage = "url(rock.png)";
+    playRound('rock', computerPlay());
 });
 
 paperButton.addEventListener('click', () => {
-  playRound('paper', computerPlay());
+    playerIcon.style.backgroundImage = "url(paper.png)";
+    playRound('paper', computerPlay());
 });
 
 scissorButton.addEventListener('click', () => {
-  playRound('scissor', computerPlay());
+    playerIcon.style.backgroundImage = "url(scissor.png)";
+    playRound('scissor', computerPlay());
 });
 
 /**
@@ -29,7 +34,7 @@ scissorButton.addEventListener('click', () => {
  * number
  * @returns A random value between ‘Rock’, ‘Paper’ or ‘Scissor’.
  */
- function computerPlay() {
+function computerPlay() {
     let random = Math.floor(Math.random() * 3);
 
     if (random == 0) {
@@ -49,6 +54,7 @@ scissorButton.addEventListener('click', () => {
  */
 function playRound(playerSelection, computerSelection) {
     if (computerSelection == 'Rock') {
+
         if (playerSelection == 'rock') {
             titleText.innerHTML = "It's a tie!";
             ruleText.innerHTML = "Rock ties with rock";
@@ -62,6 +68,9 @@ function playRound(playerSelection, computerSelection) {
             ruleText.innerHTML = "Scissor is defeated by rock";
             cpuWins++;
         }
+
+        cpuIcon.style.backgroundImage = "url(rock.png)";
+
     } else if (computerSelection == 'Paper') {
         if (playerSelection == 'rock') {
             titleText.innerHTML = "You loss this round!";
@@ -76,6 +85,9 @@ function playRound(playerSelection, computerSelection) {
             ruleText.innerHTML = "Scissor defeats paper";
             playerWins++;
         }
+
+        cpuIcon.style.backgroundImage = "url(paper.png)";
+
     } else if (computerSelection == 'Scissor') {
         if (playerSelection == 'rock') {
             titleText.innerHTML = "You won this round!";
@@ -90,52 +102,12 @@ function playRound(playerSelection, computerSelection) {
             ruleText.innerHTML = "Scissor ties with scissor";
             ties++;
         }
+
+        cpuIcon.style.backgroundImage = "url(scissor.png)";
+
     }
 
     playerScore.innerHTML = playerWins;
     cpuScore.innerHTML = cpuWins;
     tieScore.innerHTML = ties;
-}
-
-/**
- * This function asks the user if they want to play a game of rock paper scissors, if they say yes, it
- * asks them to pick rock paper or scissors, then it plays a round of rock paper scissors with the
- * computer, and asks the user if they want to keep playing.
- */
-function playGame() {
-    //let game = prompt("Would you like to play a game of Rock Paper Scissors?");
-    game = game.toLowerCase();
-    if (game == 'yes') {
-        playerWins = 0;
-        cpuWins = 0;
-        ties = 0;
-
-        let selection = prompt("Which one are you picking? Rock Paper or Scissor?");
-        selection = selection.toLowerCase();
-        if (selection == 'rock' || selection == 'paper' || selection == 'scissor') {
-            playRound(selection, computerPlay());
-        } else {
-            alert("I dont recognize that selection. I'm not playing anymore.");
-            return;
-        }
-
-        let again = prompt("Do you want to keep playing?");
-        again = again.toLowerCase();
-
-        while (again == 'yes') {
-            selection = prompt("Which one are you picking? Rock Paper or Scissor?");
-            selection = selection.toLowerCase();
-            playRound(selection, computerPlay());
-
-            again = prompt("Do you want to keep playing?");
-            again = again.toLowerCase();
-        }
-        
-        alert("Well, that was it! I had fun playing! Hope you did too!");
-
-    } else if (game == 'no') {
-        alert("That's alright, have a good day!");
-    } else {
-        alert("Answer not recognized, refresh the page to try again.")
-    }
 }
